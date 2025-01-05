@@ -110,7 +110,7 @@ function reset() {
 
 function loadQuiz() {
   reset();
-  
+
   const ans = questionData[currentIndex].answers;
   nextButton.style.display = "none";
   reTest.style.display = "none";
@@ -126,15 +126,17 @@ function loadQuiz() {
 
       if (correct) {
         selectedButton.classList.add("correct");
+
         score++;
       } else {
+        selectedButton.classList.add("no-hover");
         selectedButton.classList.add("incorrect");
       }
-      
+
       Array.from(answersButton.children).forEach((button) => {
         button.disabled = true;
-        button.classList.add("clicked")   
         if (button.dataset.correct === "true") {
+          button.classList.add("no-hover");
           button.classList.add("correct");
         }
       });
@@ -148,7 +150,6 @@ nextButton.addEventListener("click", () => {
   currentIndex++;
   if (currentIndex < questionData.length) {
     loadQuiz();
-    
   } else {
     questionDisplay.innerHTML = `Quiz Ended your Score is ${score}/10`;
     reTest.style.display = "block";
