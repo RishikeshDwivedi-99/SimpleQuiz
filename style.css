@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+.main{
+  height: 100%;
+  background-color: midnightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box{
+  min-height: 500px;
+  width: 800px;
+  border-radius: 10px;
+  background-color: floralwhite;
+  padding: 1rem 1.2rem;
+}
+
+.box h1{
+  font-size: 2.2rem;
+}
+
+.box h4{
+  width: 95%;
+  margin: 1rem;
+  border-bottom: 2px solid black;
+}
+.questions{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.answer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.answer button{
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  background-color: floralwhite;
+}
+
+.answer button:hover{
+  background-color: black;
+  color: floralwhite;
+  cursor: pointer;
+} 
+.answer button.clicked:hover {
+  background-color: floralwhite; 
+  color: rgba(0, 0, 0, 0.297); 
+  cursor: not-allowed;
+}
+
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto 0;
+}
+.next{
+  width: 150px;
+  padding: 0.6rem 1.5rem;
+  background-color: midnightblue;
+  color: floralwhite;
+  font-weight: 500;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.next:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+
+.answer .correct{
+  background-color: rgba(0, 128, 0, 0.383);
+  color: black;
+}
+.answer .incorrect{
+  background-color: rgb(255, 0,0, 0.383);
+  color: black;
+}
+
+.retest{
+  display: none;
+  width: 150px;
+  padding: 0.6rem 1.5rem;
+  background-color: midnightblue;
+  color: floralwhite;
+  font-weight: 500;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.retest:hover{
+  cursor: pointer;
+  background-color: black;
+}
+
